@@ -12,9 +12,38 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=latin-ext" rel="stylesheet"> -->
     <title>Nikola Fabian</title>
+    <style>
+      div#loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: #FFB09F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 10000000000000000;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => document.body.removeChild(document.getElementById("loadScreen")));
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="loadScreen">
+      <div id="loading">loading...</div>
+      <h1 style="display: none">Nikola Fabian</h1>
+      <h2 style="display: none">
+        wypieki, ciasta, desery, musifny, na zamówienie, zbąszynek, zbąszyń, dąbrówka wlkp, kosieczyn.
+      </h2>
+  
+    </div>
     <div id="root"></div>
   </body>
 </html>
